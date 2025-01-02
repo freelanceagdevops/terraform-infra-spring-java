@@ -11,6 +11,9 @@ Step-by-step instructions :
 Pre-requisites
 
 ●```GitHub account to create repositories```
+
 ●```AWS account with permissions to create EKS resources.```
+
 ●```AWS CLI installed and configured on your local machine.```
+
 ●```kubectl installed for Kubernetes cluster management.```
