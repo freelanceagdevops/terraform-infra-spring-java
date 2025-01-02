@@ -42,5 +42,14 @@ jobs:
       if: github.event_name == 'push'
       run: terraform destroy -auto-approve
 
+    - name: Trigger Java-Spring-App CI/CD Pipelines
+      if: success()  # Trigger only if the workflow succeeds
+      uses: freelanceagdevops/repository-dispatch@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        repository: freelanceagdevops/Java-Spring-App
+        event-type: terraform-completed
+        client-payload: '{"trigger": "ci-pipeline"}'
+
 
 
