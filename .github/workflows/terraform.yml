@@ -43,10 +43,10 @@ jobs:
       run: terraform destroy -auto-approve
 
     - name: Trigger Java-Spring-App CI/CD Pipelines
-      if: success()  # Trigger only if the workflow succeeds
+      if: success()
       uses: peter-evans/repository-dispatch@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.PAT_FOR_DISPATCH }}
         repository: freelanceagdevops/Java-Spring-App
         event-type: terraform-completed
         client-payload: '{"trigger": "ci-pipeline"}'
