@@ -9,4 +9,5 @@ Automate Infrastructure Creation with Terraform & GitHub Actions, and Applicatio
 Step-by-step instructions :
 
 Pre-requisites
-```GitHub account to create repositories```
+
+*```GitHub account to create repositories```
