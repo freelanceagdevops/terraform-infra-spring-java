@@ -44,7 +44,7 @@ jobs:
 
     - name: Trigger Java-Spring-App CI/CD Pipelines
       if: success()  # Trigger only if the workflow succeeds
-      uses: freelanceagdevops/repository-dispatch@v2
+      uses: peter-evans/repository-dispatch@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         repository: freelanceagdevops/Java-Spring-App
